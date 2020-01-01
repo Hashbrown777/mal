@@ -1,0 +1,140 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+/*reset filter link*/
+.table_header:nth-of-type(5) strong {
+    display : block;
+    width : 0;
+    height : 0;
+}
+.table_header:nth-of-type(5) strong a {
+	position : fixed;
+	width : 100%;
+	top : 40px; /*height of control strip*/
+	display : block;
+	left : 0;
+    z-index : 21;
+}
+
+table .table_header:nth-of-type(5):after {
+    max-height : calc(80% - (40px + 40px + 20px));
+        /*height of mal_control_strip + height of navigation + height of totals*/
+    padding-top : 30px !important;
+}
+
+
+/*edit button*/
+#list_surround > br ~ table:hover td:nth-of-type(5) > div {
+    position : absolute;
+}
+#list_surround > br ~ table:hover td:nth-of-type(5) > div,
+#list_surround > br ~ br ~ br ~ table:hover td:nth-of-type(5) > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > div {
+    right : calc(245px + 5% + 5px); /*image-width + image-padding*/
+    left : initial;
+}
+#list_surround > br ~ br ~ table:hover td:nth-of-type(5) > div,
+#list_surround > br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > div {
+    left : calc(245px + 5% + 5px); /*image-width + image-padding*/
+    right : initial;
+}
+
+
+
+	/*TAGS*/
+
+#list_surround table:not(:first-of-type) td:nth-of-type(5) {
+    width : 0;
+    height : 0;
+    display : block;
+    padding : 0;
+    margin : 0;
+    overflow : hidden;
+}
+
+table:hover .table_header:nth-of-type(5):after,
+#list_surround table:hover td:nth-of-type(5) > span {
+    background-color : rgba(50%, 50%, 50%, 1);
+    box-shadow: 0 0 5px rgba(50%, 50%, 50%, 1);
+    display : block;
+    border-radius : 10px;
+    padding : 10px;
+    position : absolute;
+    margin-top : -10px;
+    width : calc(100% - (10% + 50% + 5%) - (245px + 10%));
+        /*table-margin + table-width + tag-margin*/
+    animation: fadein 0.5s;
+    font-family : Verdana,Helvetica,sans-serif;
+}
+#list_surround table:hover td:nth-of-type(5) > span {
+	text-align : center;
+}
+
+#list_surround > br ~ table:hover td:nth-of-type(5) > span,
+#list_surround > br ~ br ~ br ~ table:hover td:nth-of-type(5) > span,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > span,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > span {
+	right : calc(245px + 10%); /*image-width + image-padding + image-margin + tag-margin*/
+    left : inherit;
+}
+#list_surround > br ~ br ~ table:hover td:nth-of-type(5) > span,
+#list_surround > br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > span,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > span,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:nth-of-type(5) > span {
+    left : calc(245px + 10%); /*image-width + image-padding + image-margin + tag-margin*/
+    right : inherit;
+}
+
+#list_surround textarea {
+	width : 100%;
+	height : 100%;
+}
+
+
+
+	/*HEADER TAGS*/
+
+table:hover .table_header:nth-of-type(5):before {
+    content : 'Comments explanation';
+	display : block;
+    position : absolute;
+    z-index : 12;
+}
+
+
+
+
+
+
+table:hover .table_header:nth-of-type(5):before,
+table:hover .table_header:nth-of-type(5):after {
+	width : calc(100% - (50% + 10%) - 5% * 2);
+		/*table-margin + table-width + tag-margin * 2 */
+}
+
+br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ table:hover .table_header:nth-of-type(5):before,
+br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):before,
+br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):before,
+br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):before {
+	right : 5%; /*tag-margin*/
+    left : inherit;
+}
+br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):after,
+br ~ br ~ table:hover .table_header:nth-of-type(5):before,
+br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):before,
+br ~ br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):before,
+br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover .table_header:nth-of-type(5):before {
+    left : 5%; /*tag-margin*/
+    right : inherit;
+}
+
+

@@ -1,0 +1,159 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+@import url("polar-rows.css") (min-width: 1400px);
+@import url("inline-tags.css") (min-width: 1400px);
+
+@import url("aligned-rows.css") (max-width: 1399px);
+@import url("theatre-tags.css") (max-width: 1399px);
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#list_surround br + table td:first-of-type {
+    border-top-left-radius: 10px;
+}
+#list_surround br + table td:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+#list_surround td {
+	background-color : rgba(50%, 50%, 50%, 0.25);
+}
+
+#list_surround > br + table,
+#list_surround > br + table + table {
+	font-weight : bold;
+	text-align : center;
+}
+
+#list_surround td {
+	padding : 4px 5px;
+}
+
+#list_surround {
+	text-shadow : 2px 2px black;
+}
+
+#list_surround table:first-of-type:after {
+	position : fixed;
+	display : block;
+	width : 100%;
+	height : 30px;
+	background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    text-align : right;
+	content : 'Powered by Hashbrownium';
+	top : 40px; /*height of control strip*/
+    text-shadow : none;
+    font-weight : normal;
+}
+@media (max-width: 1399px) {
+    #list_surround table:first-of-type:after {
+        content : 'You\'re in narrow screen mode\00000aPowered by Hashbrownium';
+        white-space : pre;
+    }
+}
+    
+
+
+
+	/*HOVERED ROWS*/
+
+
+table .table_header:nth-of-type(5):after {
+    font-weight : normal;
+    white-space : pre-wrap;
+    text-align : left;
+    overflow : auto;
+	content : "\000009A comment is written about a show if it has a trait I feel should really be told to you.\00000a\000009This can be positive or negative, and should help you, but they do not affect the score I have given them (how much I enjoyed them).\00000a\000009I even try to dial it back a bit for things I recommend with something cautionary, so if it's only positives, this could be your gateway anime into a new genre!\00000a\00000a\00000a\000009\002014captivating\002014\00000ayou'll be on the edge of your seat\00000a\000009\002014charming\002014\00000abe prepared to fall in love with the characters, they're adorable\00000a\000009\002014cool setting\002014\00000atheres an awesome premise, novel lore, or nifty properties to this universe\00000a\000009\002014epic\002014\00000astory/setting has a premise where a large area/population is affected\00000a\000009\002014episodic\002014\00000anot much in the way of overarching story here, that's fine though\00000a\000009\002014even if you don't watch the rest\002014\00000athis portion of the franchise is accessible stand-alone\00000a\000009\002014excellent animation\002014\00000afluid motion, stunning effects or breath-taking scenes will be enjoyed here, feast for the eyes\00000a\000009\002014fantastic music\002014\00000aoh man, the score will really set the mood or even be good stand-alone!\00000a\000009\002014get out now\002014\00000aif you're not enjoying it, but think it'll get better, think again\00000a\000009\002014gets better\002014\00000ait'll start out crappy, but hang in there\00000a\000009\002014gets worse\002014\00000ajust a warning, it can't be helped if you're watching it\00000a\000009\002014give it a go\002014\00000aI'll recommend it, because I enjoyed it, you're milage may vary\00000a\000009\002014good addition\002014\00000aif you're already watching some of the franchise, this is a good tie-in and should be watched\00000a\000009\002014got better\002014\00000aif you didn't enjoy the previous items in the franchise, try this\00000a\000009\002014got worse\002014\00000aunfortunately the franchise took a bit of a dive with this one\00000a\000009\002014great action\002014\00000achoreographicly smooth, graphically violent, fast-paced scenes or a combination are within\00000a\000009\002014highly recommended\002014\00000aI stake my reputation on you enjoying this!\00000a\000009\002014if you're into that\002014\00000ahigh score or recommendation is not accessible to those who don't enjoy this genre\00000a\000009\002014if you like the franchise\002014\00000aonly a pre-existing audience will appreciate this one\00000a\000009\002014onion cutting\002014\00000awill leave you with a lump in your throat or a pit in your stomach\00000a\000009\002014overrated\002014\00000anot necessarily actually bad, 'just not as good as folks make it out to be, curb your expectation\00000a\000009\002014rollercoaster\002014\00000abuckle up for some feels\00000a\000009\002014relished style\002014\00000aman the art style in this is titting tasty\00000a\000009\002014short\002014\00000acan be good if you're not looking for commitment\00000a\000009\002014thoughtful\002014\00000aexposes you to concepts to churn those mind gears with\00000a\000009\002014tears you\002014\00000athis will tear you apart, Lisa. You'll be rooting for one of the people who..don't get what they deserve\00000a\000009\002014underrated\002014\00000athis is a little gem that's pretty unheard of, give it a chance\00000a\00000a\00000a\000009Lack of comments doesn't mean much, just kinda meh, not bad, nothing outstanding either; as always, the score should be your go-to";
+}
+
+#list_surround table:hover {
+	width : 100%;
+	margin-left : 0 !important;
+	margin-right : 0 !important;
+	background-color : rgba(50%, 50%, 50%, 0.25);
+}
+
+#list_surround table:hover td {
+	border-top : 1px solid rgba(50%, 50%, 50%, 0.7); /*when css3 variables in chrome; hover-border*/;
+	border-bottom : 1px solid rgba(50%, 50%, 50%, 0.7); /*when css3 variables in chrome; hover-border*/;
+    padding-top : 3px;
+    padding-bottom : 3px;
+}
+
+
+
+/*
+ * replace
+ * \t|^[ ]{4} for \000009
+ * — for \002014
+ * @ for \000332
+ * " for \"
+ * \r?\n for \00000a
+
+	A comment is written about a show if it has a trait I feel should really be told to you.
+	This can be positive or negative, and should help you, but they do not affect the score I have given them (how much I enjoyed them).
+	I even try to dial it back a bit for things I recommend with something cautionary, so if it's only positives, this could be your gateway anime into a new genre!
+
+
+	—captivating—
+you'll be on the edge of your seat
+	—charming—
+be prepared to fall in love with the characters, they're adorable
+	—cool setting—
+theres an awesome premise, novel lore, or nifty properties to this universe
+	—epic—
+story/setting has a premise where a large area/population is affected
+	—episodic—
+not much in the way of overarching story here, that's fine though
+	—even if you don't watch the rest—
+this portion of the franchise is accessible stand-alone
+	—excellent animation—
+fluid motion, stunning effects or breath-taking scenes will be enjoyed here, feast for the eyes
+	—fantastic music—
+oh man, the score will really set the mood or even be good stand-alone!
+	—get out now—
+if you're not enjoying it, but think it'll get better, think again
+	—gets better—
+it'll start out crappy, but hang in there
+	—gets worse—
+just a warning, it can't be helped if you're watching it
+	—give it a go—
+I'll recommend it, because I enjoyed it, you're milage may vary
+	—good addition—
+if you're already watching some of the franchise, this is a good tie-in and should be watched
+	—got better—
+if you didn't enjoy the previous items in the franchise, try this
+	—got worse—
+unfortunately the franchise took a bit of a dive with this one
+	—great action—
+choreographicly smooth, graphically violent, fast-paced scenes or a combination are within
+	—highly recommended—
+I stake my reputation on you enjoying this!
+	—if you're into that—
+high score or recommendation is not accessible to those who don't enjoy this genre
+	—if you like the franchise—
+only a pre-existing audience will appreciate this one
+	—onion cutting—
+will leave you with a lump in your throat or a pit in your stomach
+	—overrated—
+not necessarily actually bad, 'just not as good as folks make it out to be, curb your expectation
+	—rollercoaster—
+buckle up for some feels
+	—relished style—
+man the art style in this is titting tasty
+	—short—
+can be good if you're not looking for commitment
+	—thoughtful—
+exposes you to concepts to churn those mind gears with
+	—tears you—
+this will tear you apart, Lisa. You'll be rooting for one of the people who..don't get what they deserve
+	—underrated—
+this is a little gem that's pretty unheard of, give it a chance
+
+
+	Lack of comments doesn't mean much, just kinda meh, not bad, nothing outstanding either; as always, the score should be your go-to
+*/
+

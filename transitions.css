@@ -1,0 +1,133 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+/*this is unfortunately only working in Chrome
+and even then 'animating' background image and pseudo content is out-of-spec,
+so might not be supported much longer*/
+@media (-webkit-min-device-pixel-ratio: 0) {
+    #mal_cs_otherlinks:after {
+        animation : quotes 80s linear infinite;
+    }
+    body:before {
+        animation : backgrounds 80s linear infinite;
+    }
+
+    ::safaryOnly, #mal_cs_otherlinks:after {
+        content : 'Things work slightly better in Chrome';
+    }
+}
+
+
+    /*QUOTES*/
+
+#mal_cs_otherlinks {
+    position : relative;
+}
+
+#mal_cs_otherlinks:after {
+    display : block;
+    position : absolute;
+    content : 'Things here look better in webkit';
+    left : 300px;
+    right : 170px;
+    z-index : 1;
+    top : 10px;
+    bottom : 0px;
+    text-align : center;
+    overflow : hidden;
+}
+
+@keyframes quotes {
+    100% {
+    	content : 'You don\'t question why you hear the call, you only pick up the phone – /u/Valdrbjorn';
+	}
+	0% {
+		content : 'You don\'t question why you hear the call, you only pick up the phone – /u/Valdrbjorn';
+	}
+		
+	25% {
+		content : 'Remember; no matter how desperate the situation seems, time spent thinking clearly is never time wasted. – Zombie Survival Guide';
+	}
+
+	50% {
+		content : 'If at first you don’t succeed; call it version 1.0 – unknown';
+	}
+		
+	75% {
+		content : 'The glass is neither half-full nor half-empty: it’s twice as big as it needs to be. – unknown';
+	}
+}
+
+/*It’s better to keep your mouth shut and give the impression that you’re stupid than to open it and remove all doubt. — Mark Twain*/
+
+
+
+
+    /*BACKGROUNDS*/
+
+/*using body:before position:fixed instead of body for ipads*/
+body:before {
+    position : fixed;
+    top : 0;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    display : block;
+    content : '\a0';
+    z-index : -1;
+
+    background-repeat : no-repeat;
+	background-position : 0 bottom;
+	background-attachment : fixed;
+	background-size : contain;
+	
+	background-color : #14191f;
+	/*pre-load*/
+	background-image :
+        url(http://img00.deviantart.net/7852/i/2014/249/0/c/ryuko_matoi_senketsu__kill_la_kill__minimalism_by_greenmapple17-d7y8r94.png),
+        url(http://cdn01.wallconvert.com/_media/wallpapers_1920x1080/1/4/mio-nagonahara-nichijou-33721.png),
+        url(http://img05.deviantart.net/6eea/i/2014/243/3/0/lelouch_lamperouge_code_geass_minimalist_wallpaper_by_greenmapple17-d7xhr44.png),
+        url(http://orig02.deviantart.net/a098/f/2014/177/9/b/mewtwo_minimalist_wallpaper_by_artistwannab3-d7o38sq.jpg)
+    ;
+}
+
+@keyframes backgrounds {
+	100% {
+		background-image : url(http://img00.deviantart.net/7852/i/2014/249/0/c/ryuko_matoi_senketsu__kill_la_kill__minimalism_by_greenmapple17-d7y8r94.png);
+		background-color : #14191f;
+	}
+	0% {
+		background-image : url(http://img00.deviantart.net/7852/i/2014/249/0/c/ryuko_matoi_senketsu__kill_la_kill__minimalism_by_greenmapple17-d7y8r94.png);
+		background-color : #14191f;
+	}
+	23% {
+		background-image : url(http://img00.deviantart.net/7852/i/2014/249/0/c/ryuko_matoi_senketsu__kill_la_kill__minimalism_by_greenmapple17-d7y8r94.png);
+		background-color : #14191f;
+	}
+		
+	25% {
+		background-image : url(http://cdn01.wallconvert.com/_media/wallpapers_1920x1080/1/4/mio-nagonahara-nichijou-33721.png);
+		background-color : #4B5479;
+	}
+	48% {
+		background-image : url(http://cdn01.wallconvert.com/_media/wallpapers_1920x1080/1/4/mio-nagonahara-nichijou-33721.png);
+		background-color : #4B5479;
+	}
+
+	50% {
+		background-image : url(http://img05.deviantart.net/6eea/i/2014/243/3/0/lelouch_lamperouge_code_geass_minimalist_wallpaper_by_greenmapple17-d7xhr44.png);
+		background-color : #691A24;
+	}
+	73% {
+		background-image : url(http://img05.deviantart.net/6eea/i/2014/243/3/0/lelouch_lamperouge_code_geass_minimalist_wallpaper_by_greenmapple17-d7xhr44.png);
+		background-color : #691A24;
+	}
+		
+	75% {
+		background-image : url(http://orig02.deviantart.net/a098/f/2014/177/9/b/mewtwo_minimalist_wallpaper_by_artistwannab3-d7o38sq.jpg);
+		background-color : #e3e0f1;
+	}
+	98% {
+		background-image : url(http://orig02.deviantart.net/a098/f/2014/177/9/b/mewtwo_minimalist_wallpaper_by_artistwannab3-d7o38sq.jpg);
+		background-color : #e3e0f1;
+	}
+}

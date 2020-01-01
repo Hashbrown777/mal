@@ -1,0 +1,80 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+@import url("http://fonts.googleapis.com/css?family=Carrois+Gothic+SC");
+@import url("body.css");
+@import url("images.css");
+@import url("transitions.css");
+
+/*'inherit' is used as a way to 'unset' values. All browsers except IE
+accpet 'initial' for this job, but 'inherit' works in the current setup*/
+
+body {
+	background-color : darkgray;
+	color : white;
+    position : relative;
+    height : 100%;
+}
+body, .table_header:nth-of-type(5):before, .table_header:nth-of-type(5) strong {
+	font-family : 'Carrois Gothic SC', sans-serif;
+}
+
+#mal_control_strip {
+	position : fixed;
+	top : 0;
+	background-color : transparent !important;
+    z-index : 20;
+}
+#list_surround {
+	margin-top : 40px; /*height of mal_control_strip*/
+	margin-bottom : calc(40px + 20px); /*height of navigation + height of totals*/
+}
+#grand_totals {
+	position : fixed;
+	bottom : 40px; /*height of navigation*/
+	text-align : center;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    padding-top: 10px;
+    width : 100%;
+}
+
+.category_totals {
+	text-align : center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+#list_surround > table:first-of-type { /*navigation*/
+	height : 40px;
+	position : fixed;
+	bottom : 0;
+	color : white;
+	border-collapse : collapse;
+    z-index : 10;
+	
+	/*from mal_control_strip*/
+	width: 100%;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    background: url(http://myanimelist.net/images/list-top-bg.gif);
+    background-repeat: repeat-x;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-variant: normal;
+    text-transform: none;
+}
+#list_surround > table:first-of-type td {
+	border : 1px solid #7e7e7e !important;
+}
+
+
+a {
+	color : white;
+	text-decoration : none;
+}
+a:hover {
+	text-decoration : underline;
+}

@@ -1,0 +1,56 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+#list_surround table:first-of-type:after {
+    top : 34% !important; /*height of preview*/
+}
+
+body:after {
+    display : block;
+    position : fixed;
+    top : 40px;
+    bottom : 66% /*100% - height of preivew*/;
+    left : 0;
+    right : 0;
+    background-color : rgba(0, 0, 0, 0.75);
+    content : '\a0';
+    border-bottom : 2px solid #7e7e7e;
+}
+
+#list_surround {
+    top : 34%; /*height of preview*/
+    position : relative;
+    margin-top : 0 !important;
+}
+
+#list_surround table {
+    margin-left : 5%;
+    margin-right : 5%;
+    width : 90%;
+}
+#list_surround table:hover {
+    padding-left : 5%;
+    padding-right : 5%;
+    border-right : 1px solid rgba(50%, 50%, 50%, 0.25); /*stopping text jitter*/
+}
+
+#list_surround table:not(:first-of-type) td:nth-of-type(5) {
+    display : block;
+    width : 0;
+    height : 0;
+    overflow : hidden;
+    margin : 0;
+    padding : 0;
+}
+
+#list_surround table:hover + .hide {
+    display : block;
+    position : fixed;
+    top : 40px; /*height of top*/
+    bottom : 66%; /*100% - preview height*/
+    left : 0;
+    width : 50%;
+	background-repeat : no-repeat;
+    background-position : center 0;
+    z-index : 10;
+}
+

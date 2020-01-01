@@ -1,0 +1,150 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+
+
+/*edit button*/
+#list_surround > br ~ table td:first-of-type > div:not(.header_title) {
+    position : absolute;
+    left : -999px;
+}
+#list_surround > br ~ table:hover td:first-of-type > div,
+#list_surround > br ~ br ~ br ~ table:hover td:first-of-type > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table:hover td:first-of-type > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:first-of-type > div {
+    left : 5px;
+    right : inherit;
+}
+#list_surround > br ~ br ~ table:hover td:first-of-type > div,
+#list_surround > br ~ br ~ br ~ br ~ table:hover td:first-of-type > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:first-of-type > div,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover td:first-of-type > div {
+    right : 5px;
+    left : inherit;
+}
+
+
+
+
+	/*ROWS*/
+
+
+#list_surround table {
+	width : 50%; /*when css3 variables in chrome; table-width*/
+}
+
+#list_surround > br ~ table,
+#list_surround > br ~ br ~ br ~ table,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table {
+	margin-left : 10%; /*when css3 variables in chrome; table-margin*/
+    
+    /*for MS Edge*/
+    margin-right : 40%;
+}
+#list_surround > br ~ br ~ table,
+#list_surround > br ~ br ~ br ~ br ~ table,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table {
+	margin-left : 40%; /*when css3 variables in chrome; 100% - table-width - table-margin*/
+    
+    /*for MS Edge*/
+    margin-right : 10%;
+}
+
+
+
+
+
+
+
+	/*HOVERED ROWS*/
+
+#list_surround > br ~ table:hover,
+#list_surround > br ~ br ~ br ~ table:hover,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table:hover,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover {
+	padding-left : 10%; /*same as margin-left*/
+	padding-right : 40%; /*same as opposite's margin-left*/
+    border-left : 1px solid rgba(50%, 50%, 50%, 0.25); /*stopping text jitter*/
+}
+#list_surround > br ~ br ~ table:hover,
+#list_surround > br ~ br ~ br ~ br ~ table:hover,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table:hover,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover {
+	padding-left : 40%; /*same as margin-left*/
+	padding-right : 10%; /*same as opposite's margin-left*/
+    border-right : 1px solid rgba(50%, 50%, 50%, 0.25); /*stopping text jitter*/
+}
+
+
+
+
+
+	/*IMAGE*/
+
+#list_surround .hide {
+	display : block;
+	height : 23px; /*row height*/
+	margin-top : -23px; /*row height*/
+	opacity : 0.2;
+	width : 225px; /*image width*/
+	position : absolute;
+	z-index : -1;
+	width : calc(50% / 2); /*row width*/
+	background-size : cover;
+}
+
+#list_surround > br ~ table + .hide,
+#list_surround > br ~ br ~ br ~ table + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table + .hide {
+	right : 40%; /*same as opposite's margin-left*/
+}
+#list_surround > br ~ br ~ table + .hide,
+#list_surround > br ~ br ~ br ~ br ~ table + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table + .hide {
+	right : 10%; /*same as opposite's margin-left*/
+}
+
+
+
+
+
+	/*HOVERED IMAGE*/
+
+#list_surround table:hover + .hide {
+	background-size : inherit;
+	z-index : 1;
+	opacity : 1;
+	margin-top : 0;
+	
+	display : block;
+	position : fixed;
+	width : 245px; /*10px * 2 more than image of 225px*/
+					/*when css3 variables in chrome; image-width*/
+					/*when css3 variables in chrome; image-padding*/
+	top : 40px; /*height of mal_control_strip*/
+	bottom : 40px; /*height of navigation*/
+	height : 100%;
+	border-left : 1px solid rgba(50%, 50%, 50%, 0.7); /*when css3 variables in chrome; hover-border*/
+	border-right : 1px solid rgba(50%, 50%, 50%, 0.7); /*when css3 variables in chrome; hover-border*/
+	background-position : 10px 50%;
+	background-repeat : no-repeat;
+	background-color : rgba(50%, 50%, 50%, 0.25); /*when css3 variables in chrome; hover-colour*/
+}
+
+#list_surround > br ~ table:hover + .hide,
+#list_surround > br ~ br ~ br ~ table:hover + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ table:hover + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover + .hide {
+	right : 5%; /*when css3 variables in chrome; image-margin*/
+	left : inherit;
+}
+#list_surround > br ~ br ~ table:hover + .hide,
+#list_surround > br ~ br ~ br ~ br ~ table:hover + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ table:hover + .hide,
+#list_surround > br ~ br ~ br ~ br ~ br ~ br ~ br ~ br ~ table:hover + .hide {
+	left : 5%; /*when css3 variables in chrome; image-margin*/
+	right : inherit;
+}

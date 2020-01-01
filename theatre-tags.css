@@ -1,0 +1,72 @@
+/*!by Hashbrown777. feel free to modify and use, but only if you keep this attribution at the top of your copy*/
+
+/*reset filter link*/
+.table_header:nth-of-type(5) strong {
+    display : block;
+    width : 0;
+    height : 0;
+}
+.table_header:nth-of-type(5) strong a {
+	position : fixed;
+	width : 100%;
+	top : 34%; /*height of control strip*/
+	display : block;
+	left : 0;
+    z-index : 21;
+}
+
+
+/*edit button*/
+#list_surround > br ~ table:hover td:nth-of-type(5) > div {
+    position : absolute;
+}
+
+
+
+	/*TAGS*/
+
+#list_surround table:not(:first-of-type) td:not(.table_header):nth-of-type(5) {
+    width : 0;
+    height : 0;
+    display : block;
+    padding : 0;
+    margin : 0;
+    overflow : hidden;
+}
+
+#list_surround table:nth-of-type(3) .table_header:nth-of-type(5):after,
+#list_surround table:hover td:not(.table_header):nth-of-type(5) > span {
+    display : block;
+    position : fixed;
+    left : 50%;
+    right : 0;
+    bottom : 66%; /*100% - height of preview*/
+    top : 40px; /*height of control strip*/
+    font-family : Verdana,Helvetica,sans-serif;
+    padding : 50px;
+    z-index : 10;
+}
+#list_surround table:hover td:nth-of-type(5) > span {
+	text-align : center;
+}
+
+#list_surround textarea {
+	width : 100%;
+	height : 100%;
+}
+
+
+
+#list_surround table:hover td:not(.table_header):nth-of-type(5) > span {
+    animation: fadein 0.5s;
+}
+#list_surround table:nth-of-type(3) .table_header:nth-of-type(5):after {
+    animation: fadein 0.5s;
+}
+#list_surround:hover table:nth-of-type(3) .table_header:nth-of-type(5):not(:hover):after {
+    display : none;
+}
+#list_surround table:nth-of-type(3) .table_header:nth-of-type(5):after {
+    left : 0;
+}
+
